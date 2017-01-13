@@ -10,10 +10,7 @@ RUN pip install pymongo==3.4.0
 
 COPY startup.py /tmp/
 
-# COPY mongo /usr/bin/
-# RUN chmod a+x /usr/bin/mongo
-
 VOLUME /data
 
 # Sample usage when no commands is given outside
-CMD ["/usr/bin/env python", "/tmp/startup.py"]
+CMD ["python", "-u", "/tmp/startup.py"]
