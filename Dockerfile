@@ -1,4 +1,4 @@
-FROM python:3.4.3
+FROM python:3.5.2
 MAINTAINER mgebundy@github
 
 ENV DEBIAN_FRONTEND noninteractive

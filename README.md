@@ -30,7 +30,7 @@ $ docker run -d --link=mongo:mongo --link=elasticsearch:elasticsearch mgebundy/m
 It will connect the two containers together to sync data between each other.
 
 # Which image is based on?
-The image is based on official `python:3.4.3`.
+The image is based on official `python:3.5.2`.
 
 # What has been changed?
 
