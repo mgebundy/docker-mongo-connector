@@ -6,13 +6,14 @@ ENV TZ Asia/Shanghai
 
 # Installing Mongo Connector which will connect MongoDB and Elasticsearch
 RUN pip install 'mongo-connector[elastic5]'
+RUN pip install pymongo==3.4.0
 
-COPY startup.sh /tmp/
+COPY startup.py /tmp/
 
-COPY mongo /usr/bin/
-RUN chmod a+x /usr/bin/mongo
+# COPY mongo /usr/bin/
+# RUN chmod a+x /usr/bin/mongo
 
 VOLUME /data
 
 # Sample usage when no commands is given outside
-CMD ["/bin/bash", "/tmp/startup.sh"]
+CMD ["/bin/python", "/tmp/startup.py"]
