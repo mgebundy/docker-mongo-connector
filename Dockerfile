@@ -16,4 +16,4 @@ COPY startup.py /tmp/
 VOLUME /data
 
 # Sample usage when no commands is given outside
-CMD ["/bin/python", "/tmp/startup.py"]
+CMD ["/usr/bin/env python", "/tmp/startup.py"]
