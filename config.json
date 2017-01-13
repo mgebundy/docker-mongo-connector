@@ -1,0 +1,10 @@
+{
+  "mainAddress" : "mongodb://mongodb:27017",
+  "oplogFile" : "/data/oplog.ts",
+  "docManagers" : [
+    {
+      "docManager" : "elastic2_doc_manager",
+      "targetURL" : "elasticsearch:9200"
+    }
+  ]
+}

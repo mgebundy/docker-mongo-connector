@@ -8,6 +8,7 @@ ENV TZ Asia/Shanghai
 RUN pip install 'mongo-connector[elastic5]'
 RUN pip install pymongo==3.4.0
 
+COPY config.json /data/
 COPY startup.py /tmp/
 
 VOLUME /data
