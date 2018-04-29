@@ -1,9 +1,11 @@
 import os
 import time
 import subprocess
+import json
 from pymongo import MongoClient
 
-mongoUrl = os.environ.get('MONGOURL', "mongodb://mongodb:27017")
+configData = json.load(open('/data/config.json'))
+mongoUrl = configData.get('mainAddress', os.environ.get('MONGOURL', "mongodb://mongodb:27017"))
 
 client = MongoClient(mongoUrl)
 
