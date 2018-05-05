@@ -26,6 +26,5 @@ subprocess.call([
     '-c',
     '/data/config.json',
     '-m',
-    mongoUrl,
-    '--stdout'
+    mongoUrl
 ])
